@@ -1,0 +1,10 @@
+<!--pages/orderForm/orderForm.wxml-->
+<view class="orderForm">
+  <view class="tabView flex">
+    <view class="{{count==index?'active':''}}" wx:for="{{tabView}}" wx:key="index" bindtap='isClick' data-index="{{index}}">{{item}}</view>
+  </view>
+  <view>
+    <view><text>订单编号：2222222222</text><text>未支付</text></view>
+    <view bindtap='pay'>立即支付</view>
+  </view>
+</view>

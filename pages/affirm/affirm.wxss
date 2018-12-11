@@ -1,0 +1,22 @@
+/* pages/affirm/affirm.wxss */
+.affirm {
+  font-size: 30rpx;
+}
+.red {
+  color:red;
+}
+.pad {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.time {
+  border: 1px solid #ccc;
+  border-radius: 4rpx;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.tr {
+  width: 100%;
+  text-align: right;
+}

@@ -1,0 +1,219 @@
+/* pages/fenlei/fenlei.wxss */
+
+.classify {
+  display: flex;
+  height: 100vh;
+}
+.menu {
+  margin-bottom: 10rpx;
+}
+.menu-img {
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #ccc;
+  margin: 0 10rpx;
+}
+.menu-name {
+  font-size: 28rpx;
+  flex: 1;
+}
+.money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx 0 0;
+  box-sizing: border-box;
+}
+.add-number {
+  display: inline-block;
+  color: #fff;
+  background-color: red;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 40rpx;
+  font-size: 36rpx;
+}
+.reduce-number {
+  display: inline-block;
+  color: #fff;
+  background-color: rgb(168, 166, 166);
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 40rpx;
+  font-size: 38rpx;
+}
+.number {
+  margin: 0 30rpx;
+
+}
+.tabNavs {
+  display: flex;
+  width: 200rpx;
+  flex-direction: column;
+}
+.weui-search-bar__form {
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.weui-search-bar__box {
+  border: 1px solid #ccc;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 26rpx;
+  border-radius: 20rpx;
+}
+.weui-search-bar__box icon {
+  margin-right: 10rpx;
+}
+.weui-search-bar__box input {
+  flex: 1;
+}
+.slide-image {
+  width: 100%;
+}
+
+.tabNavItem {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.active {
+  background: yellowgreen;
+  border-bottom-color: gold;
+}
+
+.tabContentItems {
+  height: 100vh;
+  flex: 1;
+}
+.tabContentItem {
+ width: 100%;
+ height: 100vh;
+  margin: 10px;
+  display: inline-block;
+}
+.dish {
+  /* width: 100%;
+  line-height: 100rpx; */
+}
+.trademark {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 1px solid #dedede;
+  background: yellowgreen;
+  border-bottom-color: gold;
+  padding-left: 10rpx;
+}
+.fixed {
+  position: fixed;
+  top: 0
+}
+.tab-content {
+  width: 100%;
+}
+.scoll-h {
+  height: 100vh;
+}
+.tab {
+  height: 300rpx;
+}
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.brand {
+  border: 1px solid #ccc;
+  font-size: 28rpx;
+  height: 100rpx;
+}
+.brand-all {
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1px solid #ccc 
+} 
+.brand-name {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 10rpx;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 100rpx;
+}
+.size {
+  background-color: red;
+  color: #fff;
+  padding: 2rpx 10rpx;
+  box-sizing: border-box;
+  border-radius: 30rpx;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 8, 8, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+.modal-box {
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  font-size: 28rpx;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.specification {
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  padding: 2rpx 20rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.check {
+  border: 1px solid rgb(106, 253, 87);
+  color: red;
+}
+checkbox {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.modal-title {
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 30rpx;
+}
+.modal-size {
+  margin-left: 10rpx;
+  margin-bottom: 15rpx;
+  font-size: 28rpx;
+}

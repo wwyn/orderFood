@@ -1,0 +1,11 @@
+<!--componenet/fromList/index.wxml-->
+<view class="fromList flex" wx:for="{{fromList}}" wx:key="index">
+  <image src="{{item.url}}"></image>
+  <view class="guige">
+    <view>{{item.title}}</view>
+    <view class="jiage flex">
+      <view>{{item.size}}</view>
+      <view>￥{{item.money}}x{{item.num}}</view>
+    </view>
+  </view>
+</view>

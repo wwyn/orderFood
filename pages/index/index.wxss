@@ -1,0 +1,77 @@
+/**index.wxss**/
+.container {
+  padding: 30rpx 0 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  transform: translate(0, 50rpx)
+}
+
+.userinfo-nickname {
+  color: rgb(253, 253, 253);
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.massage text{
+  display: block;
+  text-align: center;
+}
+.massage {
+  background-color: rgb(243, 241, 241);
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  width: 90%;
+  padding: 40rpx 0 20rpx;
+}
+.remaining {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.money {
+  color:red;
+  margin-left: 20rpx;
+}
+.recharge {
+  padding: 2rpx 15rpx;
+  border: 1px solid red;
+  color:red;
+  font-size: 28rpx;
+}
+.mt {
+  margin-top: 40rpx;
+}
+.orderForm {
+  border: 1px solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-top: none;
+  text-align: center;
+}
+.orderForm image {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-bottom: 10rpx;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20rpx;
+}

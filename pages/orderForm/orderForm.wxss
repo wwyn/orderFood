@@ -1,0 +1,14 @@
+/* pages/orderForm/orderForm.wxss */
+.orderForm {
+  font-size: 30rpx;
+}
+.tabView {
+  padding: 16rpx 20rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+}
+.active {
+  color: lightskyblue;
+}

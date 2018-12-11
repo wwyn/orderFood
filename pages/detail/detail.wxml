@@ -1,0 +1,17 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <swiper indicator-dots="{{indicatorDots}}" indicator-dots indicator-active-color="red"
+      autoplay="true" interval="2000" duration="500" circular>
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view>
+    <view>菜品名称</view>
+    <view>月售<text>赞60</text></view>
+    <view>菜品介绍</view>
+    <view><text>$16</text><text>加入购物车</text></view>
+  </view>
+</view>

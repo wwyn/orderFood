@@ -1,0 +1,123 @@
+.carts {
+    font-size: 28rpx;
+}
+.carts-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0 20rpx 20rpx;
+    box-sizing: border-box;
+    margin-right: -90rpx;
+    transition: margin-right 0.2s ease-in-out;
+}
+.allSelect {
+     padding: 20rpx 20rpx;
+    box-sizing: border-box;
+}
+.allSelect icon {
+    vertical-align: middle;
+} 
+.allSelect text {
+    margin-left: 20rpx;
+    font-size: 28rpx;
+}
+.carts-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 30rpx;
+}
+.carts-money {
+    color:crimson;
+}
+.carts-head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500rpx;
+}
+.carts-text {
+    margin-left: 20rpx;
+}
+.carts-btn {
+    border: 1px solid #ccc;
+    width: 224rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    margin-top: 20rpx;
+}
+.carts-btn text:nth-child(2) {
+    display: inline-block;
+    width: 100rpx;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 50rpx;
+}
+.carts-btn text:nth-child(2n-1) {
+    display: inline-block;
+    width: 60rpx;
+    height: 50rpx;
+}
+.close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+.close text {
+    color: chocolate;
+}
+.close-btn {
+    text-align: center;
+    width: 160rpx;
+    background-color: rgb(250, 85, 85);
+    color: #fff;
+}
+.del-cart {
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 90rpx;
+    text-align: center;
+    font-size: 28rpx;
+    background-color: rgb(250, 85, 85);
+}
+.margin_left {
+    margin-left: -90rpx;
+    margin-right: 0;
+    transition: margin-left 0.2s ease-in-out;
+ }
+image {
+    width: 120rpx;
+    height: 120rpx;
+    vertical-align: middle;
+}
+scroll-view {
+  margin-bottom: 100rpx;
+}
+.choose {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  font-size: 28rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+.cart-title {
+  text-align: center;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+  margin-top: 40%;
+}

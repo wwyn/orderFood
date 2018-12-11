@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+     <view class="massage">
+       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+       <text>公司名称</text>
+     </view>
+     <view class="remaining flex">
+      <view>余额<text class="money">￥0.00</text></view>
+      <view class="recharge">充值</view>
+     </view>
+     <view class="remaining flex mt">
+      <view>我的订单</view>
+      <view class="look-all" bindtap='lookAll'>查看全部 > </view>
+     </view>
+     <view class="orderForm flex">
+      <view wx:for="{{orderForm}}" wx:key="index">
+        <image src="{{item.src}}"></image>
+        <view>{{item.name}}</view>
+      </view>
+     </view>
+    </block>
+  </view>
+  <view class="footer">CHENMOB ©️ 2018</view>
+</view>

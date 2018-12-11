@@ -1,0 +1,33 @@
+
+<view wx:if="{{carts.length < 1}}">
+  <view class="cart-title">这里什么都没有</view>
+  <view class='choose' bindtap='goCart'>去选购</view>
+</view>
+<view class="carts" wx:if="{{carts.length > 0}}">
+    <view class="allSelect">
+        <icon data-index="{{index}}" bindtap="allSelect" type="{{ allSelect?'success':'success'}}" size="25" color="{{allSelect?'#FF0000':'#999'}}" class="icon-size" ></icon>
+        <text>全选</text>
+    </view>
+    <scroll-view scroll-y style="height:100%">
+        <view wx:for="{{carts}}" wx:key="key" data-index="{{index}}" class="{{item.margin_left?'margin_left':''}} carts-list" bindtouchstart="evt_tcoitem_start" bindtouchmove="evt_tcoitem_move" bindtouchend="evt_tcoitem_end">
+            <view class="carts-head">
+                <icon data-index="{{index}}" bindtap="isSelect" type="{{item.isSelect?'success':'success'}}" size="25" color="{{item.isSelect?'#FF0000':'#999'}}" class="icon-size" ></icon>
+                <view class="carts-name">
+                    <image class="" src="{{item.pic}}"></image>
+                        <view class="carts-text">
+                            <view>{{item.name}}</view>
+                            <view class="carts-btn">
+                                <text data-index="{{index}}" bindtap="minusNumber">-</text><text>{{item.count.quantity}}</text><text data-index="{{index}}" bindtap="addNumber">+</text>
+                            </view>
+                        </view>
+                </view>
+            </view>
+           <view class="carts-money">￥{{item.price}}x{{item.count.quantity}}</view>
+           <view data-index="{{index}}" class="del-cart" bindtap="delCart">删除</view>
+        </view>
+    </scroll-view>
+    <view class="close">
+        <view>{{carts.length}}件商品（不含运费）<text>合计:￥{{Number}}</text></view>
+        <view bindtap="closeAccount" class="close-btn">立即结算</view>
+    </view>
+</view>

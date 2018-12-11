@@ -1,0 +1,71 @@
+<!--pages/shopList/shopList.wxml-->
+<!--pages/fenlei/fenlei.wxml-->
+<view class="page-loading" wx:if="{{!hideLoading}}"></view>
+<block wx:if="{{hideLoading}}">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="16"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="关键词搜索商品" value="{{inputVal}}" bindblur="inputTyping" bindconfirm="confirmInput" />
+        <icon type="clear" size="16" bindtap='clear'></icon>
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+  </view>
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="true" interval="2000" duration="500" circular>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+  <!-- <view class="brand flex">
+    <view class="brand-all">品牌</view>
+    <view class="brand-name">菜品名称</view>
+  </view> -->
+  <view class="classify">
+    <view class="tabNavs">
+      <view class="brand-all">品牌</view>
+      <view wx:for="{{tabView}}" wx:for-item="item" wx:key="{{tabNavs}}" wx:for-index="index" data-current="{{index}}" data-id="{{item._id}}" class='tabNavItem {{currentTab == index?"active":""}}' bindtap="tabNavChange">{{item.name}}</view>
+    </view>
+   <swiper class="tab-content" current="{{currentTab}}" vertical="true" duration="300" bindchange="switchTab"
+     style="height:100vh;flex:1">
+      <block class="tab" wx:for="{{tabView}}" wx:key="{{tabItem}}" wx:for-item="item">
+          <swiper-item>
+              <scroll-view scroll-y="true" class="scoll-h">
+                <view class="brand-name">{{item.name}}</view>
+                <view  class="menu flex" wx:for="{{item.children}}" wx:key="{{tabItem}}" wx:for-item="item" data-id="{{item._id}}" catchtap='evt_goto'>
+                  <image class="menu-img" src="../../img/1.jpg"></image>
+                  <view class="menu-name">
+                    <view class="dish" >{{item.name}}</view>
+                    <view>{{item.describe}}</view>
+                    <view class="money">
+                      <view>{{item.money}}</view>
+                      <view wx:if="{{!item.size}}">
+                        <text wx:if="{{item.add}}" class="reduce-number" data-index="{{index}}" catchtap='reduceNumber'>-</text><text wx:if="{{item.add}}" class="number">{{item.num}}</text><text class="add-number" data-index="{{index}}" catchtap='addNumber'>+</text>
+                      </view>
+                      <view wx:if="{{item.size}}" data-index="{{index}}" class="size" catchtap='seletedSize'>选规格</view>
+                    </view>
+                  </view>
+                </view>
+              </scroll-view>
+          </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="modal" wx:if="{{showModel}}">
+    <view class="modal-box">
+      <form bindsubmit="formSubmit">
+        <view class="modal-title">这是菜品的名称</view>
+        <view class="modal-size">规格</view>
+        <checkbox-group bindchange="checkboxChange" name="checkbox">
+            <view wx:for="{{specification}}" wx:key="index" class="specification {{item.checked?'check':''}}" ><checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}</view>
+        </checkbox-group>
+        <button form-type="submit">提交</button>
+      </form>
+    </view>
+  </view>
+</block>
